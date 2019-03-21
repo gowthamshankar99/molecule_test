@@ -9,3 +9,5 @@
   file:
    path: /etc/docker/daemon.json
    state: touch
+   modification_time: "preserve"
+   access_time: "preserve"
