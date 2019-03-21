@@ -5,6 +5,7 @@ services:
   - docker
 before_install:
   - sudo apt-get -qq update
+  - cd gowtham/
 install:
   - pip install docker
   - pip install molecule
