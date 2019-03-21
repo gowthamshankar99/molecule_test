@@ -5,12 +5,12 @@ services:
   - docker
 before_install:
   - sudo apt-get -qq update
-install:
-  - pip install docker
-  - pip install molecule
+#install:
+#  - pip install docker
+#  - pip install molecule
   # - pip install required driver (e.g. docker, python-vagrant, shade, boto, apache-libcloud)
-script:
-  - cd gowtham/ && molecule test
+#script:
+#  - cd gowtham/ && molecule test
 notifications:
   email:
    recipients:
@@ -21,7 +21,12 @@ notifications:
 jobs:
   include:
     - stage: npm release
-      script: echo "Deploying to npm ..."
+      install:
+        - pip install docker
+        - pip install molecule
+      script: 
+        - cd gowtham 
+        - molecule test
     - stage: new stage
       script: echo "new stage2"
     - stage: final stage
