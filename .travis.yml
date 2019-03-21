@@ -22,3 +22,9 @@ jobs:
   include:
     - stage: npm release
       script: echo "Deploying to npm ..."
+    - stage: new stage
+      script: echo "new stage2"
+    - stage: final stage
+      script: echo "final stage"
+    - stage: super final stage
+      script: ls
