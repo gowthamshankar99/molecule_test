@@ -1,6 +1,6 @@
 ---
 sudo: required
-language: python
+#language: python
 services:
   - docker
 before_install:
@@ -21,6 +21,7 @@ notifications:
 jobs:
   include:
     - stage: npm release
+      language: python
       install:
         - pip install docker
         - pip install molecule
@@ -28,6 +29,7 @@ jobs:
         - cd gowtham 
         - molecule test
     - stage: new stage
+      language: nodejs
       script: echo "new stage2"
     - stage: final stage
       script: echo "final stage"
