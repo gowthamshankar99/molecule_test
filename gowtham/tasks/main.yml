@@ -9,4 +9,4 @@
   file:
    path: /etc/docker/daemon.json
    state: touch
-   changed_when: false  
+   changed_when: false
