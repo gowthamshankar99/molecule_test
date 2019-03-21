@@ -16,3 +16,5 @@ notifications:
    recipients:
      - gowthamshankar09@gmail.com
      - monisha1410@gmail.com
+   on_success: always # default: change
+   on_failure: always # default: always
