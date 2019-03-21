@@ -11,3 +11,7 @@ install:
   # - pip install required driver (e.g. docker, python-vagrant, shade, boto, apache-libcloud)
 script:
   - cd gowtham/ && molecule test
+notifications:
+  email:
+   recipients:
+     - gowthamshankar09@gmail.com
