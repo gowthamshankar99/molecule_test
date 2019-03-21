@@ -1,2 +1,12 @@
 ---
 # tasks file for gowtham shankar
+- name: Install docker
+  apt:
+   name: docker
+   state: present
+
+- name: create file
+  file:
+   path: /etc/docker/daemon.json
+   state: touch
+   changed_when: false  
