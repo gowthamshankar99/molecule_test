@@ -1,8 +1,8 @@
 ---
 # tasks file for gowtham shankar
 - name: Install docker
-  apt:
-   name: docker-ce
+  yum:
+   name: docker
    state: present
 
 - name: create file
