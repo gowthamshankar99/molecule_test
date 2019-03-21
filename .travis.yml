@@ -18,3 +18,7 @@ notifications:
      - monisha1410@gmail.com
    on_success: always # default: change
    on_failure: always # default: always
+jobs:
+  include:
+    - stage: npm release
+      script: echo "Deploying to npm ..."
